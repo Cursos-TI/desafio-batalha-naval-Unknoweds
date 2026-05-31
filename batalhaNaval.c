@@ -1,12 +1,8 @@
 #include <stdio.h>
-
-//criação do tabuleiro do batalha naval
+//Tabuleiro Batalha Naval, em uma matriz [10][10]
 int main() {
-//criando tabuleiro matriz 10x10
-int matriz [10] [10];
-    matriz[0][0] = 0;
-    matriz[0][1] = 0;
-    
-
-    return 0;
+    int matriz[10][10] = {
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+        
+    }
 }
