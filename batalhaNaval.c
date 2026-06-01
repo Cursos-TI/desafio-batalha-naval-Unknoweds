@@ -1,5 +1,6 @@
 #include <stdio.h>
 //Tabuleiro Batalha Naval, em uma matriz [10][10]
+
 int main() {
     char linha[10] = {'A','B','C','D','E','F','G','H','I','J'};
     int tabuleiro[10][10];
@@ -7,7 +8,7 @@ int main() {
     printf("tabuleiro Batalha Naval!\n");
         for(int i = 0; i < 10; i++) {
             for(int j = 0; j < 10; j++) {
-            tabuleiro[i][j] = 0; //representa a água '0'
+            tabuleiro[i][j] = 0; //inicializa com água '0'
             
         }
     }
@@ -16,9 +17,19 @@ int main() {
     tabuleiro[2][4] = 3;
     tabuleiro[2][5] = 3;
 
-    tabuleiro[3][6] = 3;
-    tabuleiro[4][6] = 3;
-    tabuleiro[5][6] = 3;
+    tabuleiro[3][3] = 3;
+    tabuleiro[3][4] = 3;
+    tabuleiro[3][5] = 3;
+
+    //NAVIOS EM DIAGONAL
+    // navio 1 de 3 casas na diagonal cima/direita
+    for (int i = 0; i < 3; i++) {
+        tabuleiro[i][i] = 3; //navio de 3 casas em diagonal
+    }
+    // navio 2 de 3 casas na diagonal baixo/esquerda
+    for (int i = 0; i < 3; i++) {
+        tabuleiro[9 - i][i] = 3; //navio de 3 casas em diagonal
+    }
     //cabeçalho das colunas a-j
     printf("   ");
     for (int j = 0; j < 10; j++) {
